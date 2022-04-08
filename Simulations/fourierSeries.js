@@ -19,7 +19,7 @@ function draw() {
   noFill();
   stroke("white");
   strokeWeight(2);
-  
+
   for(let i=0;i<num;i++){
     n=i*2+1;
     r=4/(n*PI);
@@ -27,24 +27,24 @@ function draw() {
     ellipse(xc,yc,r*2);
     let x = r*cos(n*t);
     let y = r*sin(n*t);
-    
-    
+
+
     line(xc,yc,x+xc,y+yc);
-    
+
     xc+=x;
     yc+=y;
-    
+
   }
-  
+
   wave.unshift(yc);
   for(let j=0;j<wave.length;j++){
     point((2/3)*w+j,wave[j]);
   }
-  
+
   if(wave.length > 250){
     wave.pop();
   }
-  
-  
+
+
   t+=0.02;
 }
