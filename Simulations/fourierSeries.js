@@ -6,7 +6,7 @@ let w = 700;
 let slider;
 function setup() {
   createCanvas(w, h);
-  slider = createSlider(1,100);
+  slider = createSlider(1,10);
 }
 
 function draw() {
@@ -46,5 +46,5 @@ function draw() {
   }
 
 
-  t+=0.02;
+  t+=0.01;
 }
